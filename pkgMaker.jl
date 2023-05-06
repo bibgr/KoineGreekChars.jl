@@ -28,10 +28,15 @@ templ = Template(;
         ),
         # Continuous Integration (CI) Plugins
         # -----------------------------------
-        # Codecov is the all-in-one code coverage reporting solution for any test suite.
+
+        # 1. Test Code Coverage
+        # "Codecov is the all-in-one code coverage reporting solution for any test suite"
         Codecov(;                           # Sets up code coverage submission CI -> Codecov.
             file=nothing,                   # Template file for .codecov.yml, or nothing to
         ),                                  #   [...] create no file.
+
+        # 2. Documentation
+        #
     ],
 );
 

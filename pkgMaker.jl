@@ -1,5 +1,10 @@
 using PkgTemplates
 
+# Show command line arguments
+# ---------------------------
+
+@show ARGS
+
 # Prepare template
 # ----------------
 
@@ -9,9 +14,9 @@ templ = Template(;
         "C. Naaktgeboren <NaaktgeborenC.PhD@gmail.com>",
     ],
     host = "github.com",
-    julia = v"^1.4",
+    julia = v"1.8",
     interactive = false,
-    plugins = Plugin[
+    plugins = PkgTemplates.Plugin[
         # Elementary Plugins
         # ------------------
         ProjectFile(; version=v"0.1.0"),    # Creates a 'Project.toml'.
@@ -56,7 +61,6 @@ templ = Template(;
                 light = "KGC-logo.png",
                 dark  = "KGC-logo.png",
             ),
-            canonical_url = make_canonical(NoDeploy),
             devbranch = nothing,
             edit_link = :devbranch,
             makedocs_kwargs = Dict{Symbol,Any}(),

@@ -25,7 +25,6 @@ templ = Template(;
             project=true                    # Creates 'test/Project.toml'. Req. julia v"^1.2"
         ),
         Readme(;                            # Creates a 'README.md'.
-            file = "./README.md",           # Don't loose local edits.
             destination="README.md",
             inline_badges=false,            # Badges on the same line as package name?
         ),
@@ -37,13 +36,19 @@ templ = Template(;
         # Continuous Integration (CI) Plugins
         # -----------------------------------
 
-        # 1. Appveyor
-        # Appveyor is ...
-        AppVeyor(;
+        # 1. Travis CI
+        # Thanks 2 https://discourse.julialang.org/t/built-julia-by-platform-arch/29144/2
+        # Travis CI is "Build Faster / Test your code in minutes / Deploy with confidence."
+        TravisCI(;
+            linux = true,
+            osx = false,
+            windows = false,
+            x64 = true,
             x86 = false,
+            arm64 = false,
             coverage = true,
             extra_versions = ["1.4", "1.8"],
-        ),
+		),
 
         # 2. Test Code Coverage
         # "Codecov is the all-in-one code coverage reporting solution for any test suite"

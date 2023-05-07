@@ -28,7 +28,7 @@ How to cite this project:
 ```bibtex
 @Misc{20YY-NaaktgeborenC-TEMPLATE,
   author       = {C. Naaktgeboren},
-  title        = {{__PRJ__.jl} -- Short description},
+  title        = {__PRJ__.jl -- Short description},
   howpublished = {Online},
   year         = {20YY},
   journal      = {GitHub repository},
